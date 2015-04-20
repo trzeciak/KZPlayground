@@ -17,6 +17,7 @@ NSString *const KZPPlaygroundDidChangeImplementationNotification = @"KZPPlaygrou
 @end
 
 @implementation NSObject (KZPOverride)
+#if TARGET_IPHONE_SIMULATOR
 #pragma clang diagnostic push
 #pragma clang diagnostic ignored "-Wundeclared-selector"
 #pragma ide diagnostic ignored "UnresolvedMessage"
@@ -34,7 +35,7 @@ NSString *const KZPPlaygroundDidChangeImplementationNotification = @"KZPPlaygrou
 
 }
 #pragma clang diagnostic pop
-
+#endif
 @end
 
 @interface KZPPlayground ()

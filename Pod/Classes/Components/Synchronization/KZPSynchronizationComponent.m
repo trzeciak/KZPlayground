@@ -46,10 +46,12 @@ static const void *kIsFinishedKey = &kIsFinishedKey;
   return components;
 }
 
+#if TARGET_IPHONE_SIMULATOR
 + (void)load
 {
   [self performSelectorInBackground:@selector(backgroundProcessing) withObject:nil];
 }
+#endif
 
 + (BOOL)isResetting
 {
